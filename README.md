@@ -1,24 +1,51 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
+# Ruby on Rails - Community Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> The Blog app is a classic example of a blog website. We will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- **Ruby**
+- **Rails**
+- **Postgresql**
+- **CSS**
 
-* System dependencies
+## Methodology used 
+- TDD via RSPEC
 
-* Configuration
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-* Database creation
 
-* Database initialization
+## Prerequisites
 
-* How to run the test suite
+- You need Ruby v3+, Rails v7+ and Postgresql installed on your machine.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setup
 
-* Deployment instructions
+- Clone the project `https://github.com/OybekKayumov/blog-app.git`
+- navigate to the folder `cd blog-app`
+- Install required gems `bundle i`
 
-* ...
+## Usage
+- start the server `rails s`
+
+- Enjoy interacting with the app.
+
+## Author
+
+👤 **Oybek Kayumov**
+
+- GitHub: [@OybekKayumov](https://github.com/OybekKayumov)
+- Twitter: [@KayumovOybek](https://twitter.com/KayumovOybek)
+- LinkedIn: [Oybek Kayumov](https://www.linkedin.com/in/oybek-kayumov/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/OybekKayumov/blog-app/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
