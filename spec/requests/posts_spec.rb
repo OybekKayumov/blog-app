@@ -29,7 +29,7 @@ RSpec.describe 'Posts', type: :request do
     it 'renders the right template' do
       expect(response).to render_template('show')
     end
-    
+
     it 'include the correct text' do
       expect(response.body).to include("Here are details of a user's post")
     end
