@@ -1,1 +1,12 @@
 <h1>Here is a list of posts for a user</h1>
+<%= render @user %>
+<%@post.each do |post|%>
+<%= render post %>
+<div class='comments'>
+    <%post.last_five_comments.each do |comment|%>
+    <p><%=post.author.name%>: <%=comment.text%></p>
+    <%end%>
+</div>
+<%end%>
+
+<button>Pagination</button>
