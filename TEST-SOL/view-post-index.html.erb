@@ -1,0 +1,25 @@
+<h1>Here is a list of posts for a given user</h1>
+<div class='user-top'>
+  <img class='profile-img' alt='Profile'/>
+  <div>
+    <h1 class='username'><%= @user.name%> </h1>
+    <p>Number of posts: <%= @user.post_counter%></p>
+  </div>
+</div>
+<div class='post-info'>
+  <% @user_posts.each do |post| %>
+    <div class='post-with-comments'>
+      <h2><%= link_to post.title, user_post_path(post.user, post)%> </h2>
+      <h3><%= post.text%></h3>
+      <p>Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%></p>
+    </div>
+    <div class='comments'>
+      <% post.last_five_comments.each do |comment| %>
+        <h3><%= @users.find(comment.user_id).name%>: <%= comment.text%> </h3>
+      <% end%>
+    </div>
+  <%end %>
+  <div class='button'> 
+    <button type='button'>Pagination</button>
+  </div>
+</div>

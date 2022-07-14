@@ -1,0 +1,97 @@
+body {
+  padding: 1% 5%;
+  box-sizing: border-box;
+}
+
+/* User Index */
+.user-top {
+  display: flex;
+  gap: 7%;
+  margin-bottom: 20px;
+}
+
+.user-top img {
+  width: 20%;
+  height: 100px;
+  border: 2px solid black;
+}
+
+.user-top div {
+  position: relative;
+  border: 2px solid black;
+  width: 60%;
+  height: 90px;
+  align-self: center;
+  padding: 0 20px;
+}
+
+.user-top div p,
+.post-info div p {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+/* User show */
+.user-bio {
+  border: 2px solid black;
+  height: 150px;
+  padding: 10px;
+  width: 90%;
+}
+
+.post-info div {
+  position: relative;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  width: 90%;
+}
+
+/* post index */
+.post-info .post-with-comments {
+  margin-bottom: 0;
+}
+
+.post-info .comments {
+  margin-bottom: 15px;
+}
+
+.post-info .button {
+  border: none;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.post-info .button button {
+  padding: 5px;
+  box-shadow: 5px 5px;
+  background-color: white;
+}
+
+/* post show */
+
+.single-post {
+  border: 2px solid black;
+  padding: 0 10px;
+  min-height: 50vh;
+  margin-bottom: 2px;
+}
+
+.single-post div {
+  display: flex;
+  position: relative;
+}
+
+.single-post div p {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.single-post-comments {
+  border: 2px solid black;
+  padding: 0 10px;
+  min-height: 20vh;
+}

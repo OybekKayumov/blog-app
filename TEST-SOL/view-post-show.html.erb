@@ -1,0 +1,13 @@
+<h1>Here are the details of a given user's post</h1>
+<div class='single-post'>
+  <div>
+    <h1><%= @user_post.title%> by <%= @user.name%> </h1>
+    <p>Comments: <%= @user_post.comments_counter%>, Likes: <%= @user_post.likes_counter%></p>
+  </div>
+  <h3><%= @user_post.text%></h3>
+</div>
+<div class='single-post-comments'>
+  <% @user_post.comments.each do |comment| %>
+    <h3><%= @users.find(comment.user_id).name%>: <%= comment.text%> </h3>
+  <% end%>
+</div>
