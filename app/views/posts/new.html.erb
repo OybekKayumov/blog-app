@@ -1,0 +1,24 @@
+
+<%= form_with model: [@user, @post], url: create_user_post_path  do |form| %>
+  <% if @post.errors.any? %>
+    <div>
+      <% @post.errors.full_messages.each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="">
+    <%= form.label :title %>
+    <%= form.text_field :title, placeholder: "Add post title" %>
+  </div>
+  <div class="">
+    <%= form.label :text %>
+    <%= form.text_field :text, placeholder: "Add post body" %>
+  </div>
+  <div class="">
+    <%= form.submit "Add post" %>
+  </div>
+
+<% end %>
+

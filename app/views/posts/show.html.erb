@@ -1,14 +1,16 @@
-<h1>Here are details of a user's post</h1>
-<div class="posts">
+<div class='container mt-4'>
+  <h1>Here are details of a user's post</h1>
+  <div class="posts">
     <div class="post_comments">
-        <h4><%=@post.title%> by: <%=@post.author.name%></h4>
-        <span>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></span>
+      <h4><%=@post.title%> by: <%=@post.author.name%></h4>
+      <span>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></span>
     </div>
     <p><%=@post.text%></p>
-</div>
+  </div>
 
-<div class= "comments">
+  <div class= "comments">
     <%@post.comments.each do |comment|%>
-        <p><%= comment.author.name %>: <%=comment.text%></p>
+     <p><%= comment.author.name %>: <%=comment.text%></p>
     <%end%>
+  </div>
 </div>
