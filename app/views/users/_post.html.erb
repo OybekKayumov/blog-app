@@ -1,0 +1,21 @@
+<li>
+
+  <h4><%= post.title %></h4>
+
+  <p><%= post.text %></p>
+
+  <div>
+    <button type="button">
+      Comments:
+      <span>
+        <%= post.comments_counter  ? post.comments_counter : 0 %>
+      </span>
+    </button>
+    <button type="button">
+      Likes:
+      <span>
+        <%= post.likes_counter ? post.likes_counter  : 0 %>
+      </span>
+    </button>
+  </div>
+</li>
