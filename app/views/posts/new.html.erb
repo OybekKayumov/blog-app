@@ -1,3 +1,5 @@
+<div class='container mt-5'>
+
 <%= form_with model: [@user, @post], url: create_user_post_path  do |form| %>
   <% if @post.errors.any? %>
     <div>
@@ -14,16 +16,9 @@
     <%= form.label :text %>
     <%= form.text_field :text, placeholder: "Add post body" %>
   </div>
-
-  <div class="mb-4 flex flex-col">
-    <%= form.label :comments_counter %>
-    <%= form.text_field :comments_counter, placeholder: "comments counter" %>
-  </div>
-  <div class="mb-4 flex flex-col">
-    <%= form.label :likes_counter %>
-    <%= form.text_field :likes_counter, placeholder: "likes counter" %>
-  </div>
-  <div class="mb-4 flex flex-col">
+  
+  <div class="mb-4 flex flex-col btn btn-secondary">
     <%= form.submit "Add post" %>
   </div>
 <% end %>
+</div>
