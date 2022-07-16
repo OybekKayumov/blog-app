@@ -1,4 +1,3 @@
-
 <%= form_with model: [@user, @post], url: create_user_post_path  do |form| %>
   <% if @post.errors.any? %>
     <div>
@@ -7,18 +6,24 @@
       <% end %>
     </div>
   <% end %>
-
-  <div class="">
+  <div class="mb-4 flex flex-col">
     <%= form.label :title %>
     <%= form.text_field :title, placeholder: "Add post title" %>
   </div>
-  <div class="">
+  <div class="mb-4 flex flex-col">
     <%= form.label :text %>
     <%= form.text_field :text, placeholder: "Add post body" %>
   </div>
-  <div class="">
+
+  <div class="mb-4 flex flex-col">
+    <%= form.label :comments_counter %>
+    <%= form.text_field :comments_counter, placeholder: "comments counter" %>
+  </div>
+  <div class="mb-4 flex flex-col">
+    <%= form.label :likes_counter %>
+    <%= form.text_field :likes_counter, placeholder: "likes counter" %>
+  </div>
+  <div class="mb-4 flex flex-col">
     <%= form.submit "Add post" %>
   </div>
-
 <% end %>
-
