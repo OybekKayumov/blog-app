@@ -1,13 +1,18 @@
-<h1>Details of the user</h1>
-<%= render @user %>
+<div class= 'container mt-3'>
+  <h2>Details of the user</h2>
 
-<div class="bio">
+  <h1 class='display-5 text-primary'> <%= @user.name %></h1>  
+
+  <div class="bio">
     <h2>Bio</h2>
     <p><%=@user.bio%></p>
+  </div>
+
+  <%@post.each do |post|%>
+    <%= render post %>
+  <%end%>
+  <p class= 'mt-5'>
+   <button class="text-center btn btn-outline-info"><%= link_to ("See all posts"),user_posts_path(@user.id) %></button>
+  </p>
 </div>
 
-<%@post.each do |post|%>
-    <%= render post %>
-<%end%>
-
-<button><%= link_to ("See all posts"),user_posts_path(@user.id) %></button>

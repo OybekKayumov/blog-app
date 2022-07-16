@@ -10,6 +10,11 @@ gem 'rails', '~> 7.0.3'
 
 gem 'ffi', github: 'ffi/ffi', submodules: true
 
+gem 'bootstrap', '~> 5.1.3'
+gem 'bootstrap_form', '~> 5.1'
+gem 'jquery-rails'
+gem 'sassc-rails', '>= 2.1.0'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 

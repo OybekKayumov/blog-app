@@ -1,0 +1,11 @@
+<%= form_with(model: [ post.user, post.user.comments.build ], url: "/users/#{post.user.id}/posts/#{post.id}/comments") do |form| %>
+
+  <div>
+    <%= form.text_field :text, placeholder:"Add a comment" %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
