@@ -6,8 +6,10 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
+    @post.comments_counter = 0
+    @post.likes_counter = 0
     if @post.save
-      redirect_to "/users/#{@post.user.id}/posts/#{@post.id}"
+      redirect_to "/users/#{@post.author.id}/posts/#{@post.id}"
     else
       render :new
     end
@@ -20,7 +22,7 @@ class PostsController < ApplicationController
   def show
     @current_user = current_user
     @user = User.find(params[:user_id])
-    @post = Post.includes(:user, comments: [:user]).find(params[:id])
+    @post = Post.includes(:author, comments: [:author]).find(params[:id])
     @comment = Comment.where(post_id: @post.id).order(created_at: :desc)
   end
 
