@@ -21,18 +21,17 @@
   </div>
 
   <div class='card mt-5 mb-3'>
-    <%# <h3>Posts:</h3> %>
     <ul class="list-unstyled mt-4">
       <% @post.each do |post| %>
         <li class="card mb-3">
-          <h3>Post <%= post.id %></h3>
+          <h4>Post <%= post.id %></h4>
           <a href="<%= user_posts_path(@user) %>" class="">
             <div class="">
               <div>  
                 <p class="">Post Title: <%= post.title %></p>
                 <p class="">Post Text: <%= post.text %></p>
               </div> 
-              <p class="">Likes: <%= post.likes_counter %> , comments: <%= post.comments_counter %></p>
+              <p class="">Likes: <%= post.likes_counter %> , Comments: <%= post.comments_counter %></p>
             </div>
           </a>
         </li>
