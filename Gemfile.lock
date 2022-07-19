@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/ffi/ffi.git
-  revision: 07a1c0c028942f786b80f48206795a8fa6b0e8f5
-  submodules: true
-  specs:
-    ffi (1.15.5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -121,6 +114,8 @@ GEM
     digest (3.1.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    ffi (1.15.5)
+    ffi (1.15.5-x64-mingw-ucrt)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -167,10 +162,13 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.7-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.13.7-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
+    pg (1.4.1)
     pg (1.4.1-x64-mingw-ucrt)
     popper_js (2.9.3)
     public_suffix (4.0.7)
@@ -306,6 +304,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -315,7 +314,6 @@ DEPENDENCIES
   database_cleaner
   debug
   devise
-  ffi!
   importmap-rails
   jbuilder
   jquery-rails
