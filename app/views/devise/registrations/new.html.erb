@@ -13,7 +13,7 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", class: "form-control w-75 mb-4", placeholder: "Password" %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password",  class: "form-control w-75 mb-4", placeholder: "Confirm password" %>
-  
+    <%= f.hidden_field :posts_counter , value: 0 %>  
 
     <%= f.submit "Sign up", class: "form-control w-75 btn btn-primary"%>
     </div>
