@@ -1,24 +1,21 @@
 <div class='container mt-5'>
+  <h3>New post</h3>
 
 <%= form_with model: [@user, @post], url: create_user_post_path  do |form| %>
   <% if @post.errors.any? %>
     <div>
       <% @post.errors.full_messages.each do |message| %>
-        <div><%= message %></div>
+        <div class="text-danger"><%= message %></div>
       <% end %>
     </div>
   <% end %>
-  <div class="mb-4 flex flex-col">
-    <%= form.label :title %>
-    <%= form.text_field :title, placeholder: "Add post title" %>
+  <div class="mb-4">    
+    <%= form.text_field :title, placeholder: "Add post title", class: "form-control w-75" %>
   </div>
-  <div class="mb-4 flex flex-col">
-    <%= form.label :text %>
-    <%= form.text_field :text, placeholder: "Add post body" %>
-  </div>
-  
-  <div class="mb-4 flex flex-col btn btn-secondary">
-    <%= form.submit "Add post" %>
-  </div>
+  <div class="mb-4">    
+    <%= form.text_area :text, placeholder: "Add post text", class: "form-control w-75" %>
+  </div> 
+
+  <%= form.submit class: "mb-4 btn btn-primary"%>
 <% end %>
 </div>
