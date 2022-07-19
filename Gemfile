@@ -12,6 +12,7 @@ gem 'ffi', github: 'ffi/ffi', submodules: true
 
 gem 'bootstrap', '~> 5.1.3'
 gem 'bootstrap_form', '~> 5.1'
+gem 'devise'
 gem 'jquery-rails'
 gem 'sassc-rails', '>= 2.1.0'
 
