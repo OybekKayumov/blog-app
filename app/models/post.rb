@@ -15,6 +15,6 @@ class Post < ApplicationRecord
   end
 
   def last_five_comments
-    comments.includes(:user).last(5)
+    comments.includes(:author).last(5)
   end
 end
