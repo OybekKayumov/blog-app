@@ -1,6 +1,12 @@
-<div class='container mt-3'>
+<div class='container mt-3 mb-3'>
+  <h1 class="mb-3">Here is a list of posts for a user</h1>
 
-  <h1>Here is a list of posts for a user</h1>
+  <div class='text-start mb-3 form-control w-50'>
+    <h3>
+      <%= link_to ("Create a new post"), new_user_post_path(@user.id), class: "text-lg text-success" %>
+    </h3>
+  </div>
+
   <%= render @user %>
   <% @user.posts.each do |post|%>
   <%= render post %>

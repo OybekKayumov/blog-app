@@ -41,8 +41,8 @@
   </div>
   <br>
 
-  <div class='mb-4 text-center'>
-    <button class="btn btn-primary">See all posts</button>
+  <div class='text-center'>
+    <%= link_to ("See all posts"), user_posts_path(@user.id), class: "btn btn-outline-primary" %>
   </div>
   <br>
 </div
