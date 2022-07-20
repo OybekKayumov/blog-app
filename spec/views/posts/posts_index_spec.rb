@@ -4,7 +4,8 @@ RSpec.describe 'posts/index.html.erb', type: :feature do
   before(:each) do
     visit new_user_session_path
     @user = User.new(name: 'Sam', bio: 'Full stack developer', email: 'sam@gmail.com', password: 'sam22021',
-                     photo: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png', posts_counter: 1, confirmed_at: Time.now)
+                     photo: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png',
+                     posts_counter: 1, confirmed_at: Time.now)
     @user.save
     5.times do
       Post.create(title: 'First post', text: 'Post content', author_id: @user.id, comments_counter: 0, likes_counter: 0)
