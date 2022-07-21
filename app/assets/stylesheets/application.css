@@ -14,12 +14,8 @@
  *= require_self
  */
 
-@import 'bootstrap';
+/* @import 'bootstrap'; */
 
 a {
   text-decoration: none;
-}
-
-.loginform {
-  width: 70%;
 }
