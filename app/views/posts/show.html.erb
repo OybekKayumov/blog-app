@@ -14,4 +14,7 @@
      <p><%= comment.author.name %>: <%=comment.text%></p>
     <%end%>
   </div>
+   <% if can? :destroy, @post %>
+    <%= button_to 'Delete Post', "/users/#{params[:user_id]}/posts/#{@post.id}",  data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?" }, class: "btn text-dark btn-danger" %>
+  <% end %> 
 </div>
