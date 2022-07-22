@@ -15,6 +15,7 @@ gem 'bootstrap_form', '~> 5.1'
 gem 'cancancan'
 gem 'devise'
 gem 'jquery-rails'
+gem 'jwt'
 gem 'sassc-rails', '>= 2.1.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
