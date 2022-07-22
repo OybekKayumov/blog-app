@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   # root "users#index"
   root to: "users#index"
 
+  # API Routes
   get '/api/users/:user_id/posts/', to: 'api_endpoints#user_posts'
   get '/api/users/:user_id/posts/:post_id/comments', to: 'api_endpoints#user_post_comments'
+  post '/api/users/:user_id/posts/:post_id/comments', to: 'api_endpoints#new_comment'
 
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create, :destroy] do
