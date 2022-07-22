@@ -12,7 +12,7 @@ class ApiEndpointsController < ApplicationController
 
   def new_comment
     post = Post.find(params[:post_id])
-    @comment = post.comments.new(comment_params.merge(author: current_user))
+    @comment = post.comments.new(author: current_user, text: params[:text])
     if @comment.save
       render json: @comment, status: :ok
     else
@@ -23,6 +23,6 @@ class ApiEndpointsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.permit(:text)
   end
 end
