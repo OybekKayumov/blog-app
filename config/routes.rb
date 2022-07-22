@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
+  scope :api, defaults: { format: :json } do
+    devise_for :users, controllers: { sessions: :sessions },
+                       path_names: { sign_in: :login }
+    resource :user, only: [:show, :update]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
   # root "users#index"
   root to: "users#index"
-
-  # API Routes
-  get '/api/users/:user_id/posts/', to: 'api_endpoints#user_posts'
-  get '/api/users/:user_id/posts/:post_id/comments', to: 'api_endpoints#user_post_comments'
-  post '/api/users/:user_id/posts/:post_id/comments', to: 'api_endpoints#new_comment'
 
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create, :destroy] do
@@ -23,5 +22,9 @@ Rails.application.routes.draw do
   post '/users/:user_id/posts/:id/likes', to: 'likes#create', as: 'create_post_like'
   get '/posts/:post_id/comments/new', to: 'comments#new', as: 'new_post_comment'
   post '/posts/:post_id/comments', to: 'comments#create', as: 'create_post_comment'
-  
+
+  # API Routes
+  get '/api/v1/users/:user_id/posts/', to: 'api/v1/posts#index', as: 'api_user_posts'
+  get '/api/v1/users/:user_id/posts/:post_id/comments', to: 'api/v1/comments#index', as: 'api_posts_comments'
+  post '/api/v1/users/:user_id/posts/:post_id/comments', to: 'api/v1/comments#create', as: 'api_create_posts_comments'  
 end

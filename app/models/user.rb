@@ -10,6 +10,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }
 
+  after_create :generate_api_token
+
   def is?(requested_role)
     role == requested_role.to_s
   end
@@ -20,5 +22,18 @@ class User < ApplicationRecord
 
   def admin?
     :role == 'admin'
+  end
+
+  def generate_jwt
+    JWT.encode({ id:,
+                 exp: 60.days.from_now.to_i },
+               Rails.application.secrets.secret_key_base)
+  end
+
+  private
+
+  def generate_api_token
+    self.api_token = Devise.friendly_token
+    save
   end
 end
