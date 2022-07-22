@@ -4,6 +4,11 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @post = Post.includes(:user).where(user_id: @user.id).order(created_at: :desc)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @post }
+    end
   end
 
   def create
@@ -30,6 +35,11 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.includes(:author, comments: [:author]).find(params[:id])
     @comment = Comment.where(post_id: @post.id).order(created_at: :desc)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @post }
+    end
   end
 
   def post_params

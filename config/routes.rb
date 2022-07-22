@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   # root "users#index"
   root to: "users#index"
+
+  get '/api/users/:user_id/posts/', to: 'api_endpoints#user_posts'
+
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create, :destroy] do
       resources :comments, only: [:create, :destroy]
