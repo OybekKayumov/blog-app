@@ -4,4 +4,8 @@ class ApiEndpointsController < ApplicationController
     @posts = @user.posts 
     render json: @posts, status: :ok    
   end   
+  def user_post_comments
+   @comments = Comment.find_by(post_id: params[:post_id])
+    render json: @comments, status: :ok
+  end
 end
