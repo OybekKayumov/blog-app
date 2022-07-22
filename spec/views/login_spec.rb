@@ -1,12 +1,11 @@
 require 'rails_helper'
-# require 'login_partial_spec.rb'
 
 RSpec.feature 'Login', type: :feature do
   before :each do
     User.create(name: 'Testing', posts_counter: 0, email: 'user@example.com', password: 'password',
                 confirmed_at: '2022-03-02 22:25:13.71382')
   end
-  # include login_partial
+
   it 'can enter a name and receive a greeting' do
     visit user_session_path
     expect(page).to have_content 'Log in'
