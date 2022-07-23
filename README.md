@@ -32,7 +32,20 @@ To get a local copy up and running follow these simple example steps.
 
 - Enjoy interacting with the app.
 
-## Author
+## Authors
+
+👤 **Solomon Hagan**
+
+- GitHub: [@Achilles-Dev](https://github.com/Achilles-Dev/)
+- Twitter: [@SoloAchilles](https://twitter.com/SoloAchilles/)
+- LinkedIn: [Solomon Hagan](https://www.linkedin.com/in/solomon-hagan/)
+
+
+👤 **Sentayhu Berhanu**
+
+- GitHub: [@sentayhu19](https://github.com/sentayhu19)
+- LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/sentayhu-berhanu-6376579a/)
+
 
 👤 **Oybek Kayumov**
 
